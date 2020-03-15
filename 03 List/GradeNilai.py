@@ -18,11 +18,12 @@ def nilai_ke_grade(nilai_akhir):
         grade = 'D'
     return grade
 
-nilai_agus = hitung_nilai_akhir(80, 75, 30, 70);
-grade_agus = nilai_ke_grade(nilai_agus)
+nama_mhs = ["Rina","Agus","Surti"]
+nilai_mhs = [[90, 95, 80, 80],[80, 75, 30, 70],[100, 75, 60, 65]];
 
-nilai_rina = hitung_nilai_akhir(90, 95, 80, 80);
-grade_rina = nilai_ke_grade(nilai_rina)
-
-print('Nilai akhir Agus = {}, dengan grade= {}'.format(nilai_agus,grade_agus))
-print('Nilai akhir Rina = {}, dengan grade= {}'.format(nilai_rina,grade_rina))
+for i in range(len(nama_mhs)):
+    nama = nama_mhs[i]
+    nilai = nilai_mhs[i]
+    nilai_akhir = hitung_nilai_akhir(nilai[0],nilai[1],nilai[2],nilai[3])
+    grade = nilai_ke_grade(nilai_akhir)
+    print('{} mendapatkan nilai akhir = {}, grade= {}'.format(nama,nilai_akhir,grade))
