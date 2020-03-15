@@ -1,7 +1,3 @@
-'''
-Refresh materi semester 1
-Cara menghitung nilai akhir dan gradenya
-'''
 bobot_hadir = 0.15
 bobot_tugas = 0.25
 bobot_uts = 0.3
