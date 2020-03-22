@@ -18,16 +18,13 @@ def nilai_ke_grade(nilai_akhir):
         grade = 'D'
     return grade
 
-class NilaiMataKuliah:
-    def __init__(self, nama, mata_kuliah, nilai_hadir,nilai_tugas,nilai_uts,nilai_uas):
-        self.nama = nama
-        self.mata_kuliah = mata_kuliah
-        self.nilai_hadir = nilai_hadir
-        self.nilai_tugas = nilai_tugas
-        self.nilai_uts = nilai_uts
-        self.nilai_uas = nilai_uas
-    
-obj = NilaiMataKuliah("Agus","Pemrograman Lanjut",80,75,85,70)
-nilai_akhir = hitung_nilai_akhir(obj.nilai_hadir,obj.nilai_tugas,obj.nilai_uts,obj.nilai_uas)
-grade = nilai_ke_grade(nilai_akhir)
-print('{} pada mata kuliah {} mendapatkan nilai akhir = {}, grade= {}'.format(obj.nama,obj.mata_kuliah,nilai_akhir,grade))
+nama_mhs = ["Rina","Agus","Surti"]
+nilai_mhs = [[90, 95, 80, 80],[80, 75, 30, 70],[100, 75, 60, 65]];
+
+for i in range(len(nama_mhs)):
+    nama = nama_mhs[i]
+    nilai = nilai_mhs[i]
+    nilai_akhir = hitung_nilai_akhir(nilai[0],nilai[1],nilai[2],nilai[3])
+    grade = nilai_ke_grade(nilai_akhir)
+    print('{} mendapatkan nilai akhir = {}, grade= {}'.format(nama,nilai_akhir,grade))
+
